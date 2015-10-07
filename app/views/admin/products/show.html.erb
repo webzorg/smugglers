@@ -1,0 +1,73 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sku:</strong>
+  <%= @admin_product.sku %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @admin_product.price %>
+</p>
+
+<p>
+  <strong>Display:</strong>
+  <%= @admin_product.display %>
+</p>
+
+<p>
+  <strong>Volume:</strong>
+  <%= @admin_product.volume %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @admin_product.brand %>
+</p>
+
+<p>
+  <strong>Subcategory:</strong>
+  <%= @admin_product.subcategory %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @admin_product.country %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @admin_product.region %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @admin_product.category %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @admin_product.age %>
+</p>
+
+<p>
+  <strong>Abv:</strong>
+  <%= @admin_product.abv %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @admin_product.description %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @admin_product.status %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @admin_product.image.url(:medium) %>
+</p>
+<%= link_to 'Edit', edit_admin_product_path(@admin_product) %> |
+<%= link_to 'Back', admin_products_path %>

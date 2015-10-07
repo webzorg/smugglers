@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Admin Products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sku</th>
+      <th>Price</th>
+      <th>Display</th>
+      <th>Volume</th>
+      <th>Brand</th>
+      <th>Subcategory</th>
+      <th>Country</th>
+      <th>Region</th>
+      <th>Category</th>
+      <th>Age</th>
+      <th>Abv</th>
+      <th>Image</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_products.each do |admin_product| %>
+      <tr>
+        <td><%= admin_product.sku %></td>
+        <td><%= admin_product.price %></td>
+        <td><%= admin_product.display %></td>
+        <td><%= admin_product.volume %></td>
+        <td><%= admin_product.brand %></td>
+        <td><%= admin_product.subcategory %></td>
+        <td><%= admin_product.country %></td>
+        <td><%= admin_product.region %></td>
+        <td><%= admin_product.category %></td>
+        <td><%= admin_product.age %></td>
+        <td><%= admin_product.abv %></td>
+        <td><%= admin_product.description %></td>
+        <td><%= admin_product.status %></td>
+        <td><%= image_tag admin_product.image.url(:thumb) %></td>
+        <td><%= link_to 'Show', admin_product %></td>
+        <td><%= link_to 'Edit', edit_admin_product_path(admin_product) %></td>
+        <td><%= link_to 'Destroy', admin_product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Product', new_admin_product_path %>
+
+<h2>Import Products</h2>
+
+<%= form_tag import_admin_products_path, multipart:true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>

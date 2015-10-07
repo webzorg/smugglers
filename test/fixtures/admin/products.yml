@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sku: MyString
+  price: 9.99
+  display: MyString
+  volume: 1.5
+  brand: MyString
+  type: 
+  country: MyString
+  region: MyString
+  category: MyString
+  age: 1
+  abv: 1.5
+  image: MyString
+  description: MyText
+  status: false
+
+two:
+  sku: MyString
+  price: 9.99
+  display: MyString
+  volume: 1.5
+  brand: MyString
+  type: 
+  country: MyString
+  region: MyString
+  category: MyString
+  age: 1
+  abv: 1.5
+  image: MyString
+  description: MyText
+  status: false
