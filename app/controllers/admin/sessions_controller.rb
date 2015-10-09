@@ -1,6 +1,7 @@
 class Admin::SessionsController < Admin::ApplicationController
   skip_before_action :authorize, only: [:new, :create]
   def new
+     current_user ? redirect_to(admin_root_path) : render("new")
   end
   def create
     admin_user = Admin::User.find_by_email(params[:email])

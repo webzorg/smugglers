@@ -8,7 +8,5 @@
   <%= link_to "Log Out", admin_session_path("current"), method: "delete"%>
   <br/>
   <%= link_to "Products", admin_products_path %>
-  <% else %>
-  <%= link_to "Login", new_admin_session_path %>
 
 <% end %>
