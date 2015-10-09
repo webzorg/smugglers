@@ -40,7 +40,7 @@
         <td><%= product.description %></td>
         <td><%= product.status %></td>
         <td><%= image_tag product.image.url(:thumb) %></td>
-        <td><%= link_to 'Show', product %></td>
+        <td><%= link_to 'Show', product_path(product) %></td>
       </tr>
     <% end %>
   </tbody>
