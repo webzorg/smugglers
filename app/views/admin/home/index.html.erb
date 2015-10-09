@@ -1,0 +1,14 @@
+<h1>Admin::Home#index</h1>
+<p>Find me in app/views/admin/home/index.html.erb</p>
+<% link_to admin_products_path, "product list"%>
+
+<% if current_user %>
+  Logged in as <%= current_user.email %>
+
+  <%= link_to "Log Out", admin_session_path("current"), method: "delete"%>
+  <br/>
+  <%= link_to "Products", admin_products_path %>
+  <% else %>
+  <%= link_to "Login", new_admin_session_path %>
+
+<% end %>

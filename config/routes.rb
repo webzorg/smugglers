@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
 
-  namespace :admin do
-  get 'users/new'
-  end
+
 
   namespace :admin do
     resources :products do
@@ -10,9 +8,16 @@ Rails.application.routes.draw do
         post :import
       end
     end
+    resources :users
+    resources :sessions
+    root 'home#index'
   end
-  get 'welcome/index'
+
   root 'welcome#index'
+  resources :products, only: [:index, :show]
+  #get 'products/index'
+  #get 'products/show'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

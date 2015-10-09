@@ -60,3 +60,7 @@
   <%= file_field_tag :file %>
   <%= submit_tag "Import" %>
 <% end %>
+<br />
+<%= link_to "Log Out", admin_session_path("current"), method: "delete"%>
+<br />
+<%= link_to "Home", admin_root_path%>

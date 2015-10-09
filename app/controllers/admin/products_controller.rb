@@ -1,6 +1,6 @@
-class Admin::ProductsController < ApplicationController
+class Admin::ProductsController < Admin::ApplicationController
   before_action :set_admin_product, only: [:show, :edit, :update, :destroy]
-
+  skip_before_action :authorize, only: [:index, :show]
   # GET /admin/products
   # GET /admin/products.json
   def index
