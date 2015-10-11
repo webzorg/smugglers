@@ -1,7 +1,8 @@
 class ProductsController < ApplicationController
 
   def index
-    @products = Product.all
+    @products = Product.status(true).page(params[:page]).per(params[:per])
+    @products = @products.giftbox(params[:giftbox]) if params[:giftbox].present?
   end
 
   def show

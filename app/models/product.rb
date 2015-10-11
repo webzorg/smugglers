@@ -21,4 +21,8 @@ class Product < ActiveRecord::Base
       end
     end
   end
+  scope :status, -> (status) { where status: status }
+  scope :giftbox, -> (giftbox) {where giftbox: giftbox}
+  paginates_per 50
+
 end

@@ -1,0 +1,82 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+*/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+
+.container{
+  width:100%;
+  max-width:1080px;
+  margin:0 auto;
+}
+.item_wrapper{
+  position: relative;
+  display:inline-block;
+  width:207px;
+  height: 250px;
+  border:3px solid #555;
+  border-radius: 10px;
+  padding:2px;
+  background-color: white;
+  overflow: hidden;
+}
+.item_wrapper:hover{
+  border:3px solid #fff;
+}
+.thumb{
+  margin:0 auto;
+  display: block;
+}
+.display{
+  font-size:1.1em;
+  font-weight: bold;
+  position: absolute;
+  margin-top: 2px;
+}
+.price{
+  font-size:1.1em;
+  font-weight: bold;
+  position: absolute;
+  top:5px;
+  left:5px;
+  padding:0px 4px 0px 4px;
+  color:black;
+  background-color:#ddd;
+}
+
+.pagination a,
+.pagination span.current,
+.pagination span.gap {
+  float: left;
+  padding: 0 14px;
+  line-height: 38px;
+  text-decoration: none;
+  background-color: #222222;
+  border-left:0px;
+  border-radius: 3px;
+  border:1px solid #AA8800;
+  font-size:1.3em;
+  margin-right:2px;
+  color:#AA8800;
+}
+.pagination span.current{
+  background-color: #AA8800;
+  border:1px solid #222222;
+  font-size:1.3em;
+  opacity:0.9;
+  -webkit-box-shadow: 2px 2px 2px #999;
+  -moz-box-shadow: 2px 2px 2px #999;
+  box-shadow: 2px 2px 2px #999;
+  color: #222222;
+}
