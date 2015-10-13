@@ -1,40 +1,41 @@
-<div class="container">
+<nav id="indexNav" class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
 
-<%= form_tag(products_path, method: "get", class: "bottlefilter") do %>
-  <div class="btn-group" data-toggle="buttons">
-    <%= label_tag nil, class: "btn btn-primary #{filterActive("giftbox")}" do%>
-      <%= check_box_tag "giftbox", "true", giftbox("true")%>Giftbox
+    <%= search_form_for @search, html: {class:"navbar-form navbar-left"} do |f|%>
+    <div class="form-group">
+        <%= f.text_field :display_or_subcategory_or_category_cont, class:"form-control", placeholder:"Search" %>
+    </div>
+        <span data-toggle="buttons" id="giftbox">
+          <%= label_tag nil, class: "btn btn-default #{filterActive}" do%>
+            <%= check_box_tag "giftbox", "true", giftbox %>Giftbox?
+          <% end %>
+        </span>
+        <%= f.submit "Submit", class:"btn btn-primary", type:"submit"%>
+        <span>
+          <%= sort_link(@search, :price, 'Sort by Price', {}, class: 'sort btn btn-default') %>
+          <%= sort_link(@search, :age, 'Sort by Age', {}, class: 'sort btn btn-default') %>
+        </span>
     <% end %>
+
   </div>
+</nav>
 
-
-  <%= submit_tag "Filter", class: "btn btn-primary"%>
-<% end %>
-
-<br />
-
+<div class="maincontainer">
   <% @products.each do |product| %>
     <div class="item_wrapper">
       <%= link_to product_path(product) do%>
         <%= image_tag product.image.url(:thumb), class: "thumb"  %>
-      <%= content_tag(:span, product.display, class:"display")%>
+        <%= content_tag(:span, product.display, class:"display")%>
+        <%= content_tag(:span, "#{product.price} ლ", class:"price")%>
+      <%= content_tag(:span, safe_join([product.age, "yo"]) , class:"age") if product.age.to_i > 0 %>
       <% end %>
-      <%= content_tag(:span, "#{product.price} ლ", class:"price")%>
+
     </div>
   <% end %>
-  <br/>
 
-</div>
-
-<div>
-   <br/>
-   <%= paginate @products %>
-  <br/>
-  <%= link_to 'Home', root_path%>
+  <br />
+  <div class="pg">
+    <%= paginate @products%>
   </div>
 
-<script type="text/javascript">
-  $(document).ready(function() {
-    $(".dropdown-toggle").dropdown();
-});
-</script>
+</div>

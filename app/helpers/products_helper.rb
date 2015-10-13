@@ -1,9 +1,9 @@
 module ProductsHelper
-  def giftbox(giftbox_var)
-    params[:giftbox] && params[:giftbox].include?(giftbox_var)
+  def giftbox
+    params[:giftbox] && params[:giftbox].include?("true")
   end
 
-  def filterActive(giftbox_var)
+  def filterActive
     return "active" if params[:giftbox] && params[:giftbox].include?("true")
   end
 end

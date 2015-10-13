@@ -13,11 +13,22 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.container{
+
+#nav{
+  z-index: 9999;
+}
+.maincontainer{
   width:100%;
   max-width:1080px;
   margin:0 auto;
+  margin-top:110px;
 }
+@media (max-width: 768px) {
+  .maincontainer{
+    margin-top:170px;
+  }
+}
+
 .item_wrapper{
   position: relative;
   display:inline-block;
@@ -52,29 +63,24 @@
   color:black;
   background-color:#ddd;
 }
-
-.pagination a,
-.pagination span.current,
-.pagination span.gap {
-  float: left;
-  padding: 0 14px;
-  line-height: 38px;
-  text-decoration: none;
-  background-color: #222222;
-  border-left:0px;
-  border-radius: 3px;
-  border:1px solid #AA8800;
-  font-size:1.3em;
-  margin-right:2px;
-  color:#AA8800;
+.age{
+  font-size:1.1em;
+  font-weight: bold;
+  position: absolute;
+  top:5px;
+  left:150px;
+  padding:0px 4px 0px 4px;
+  color:black;
+  background-color:#ddd;
 }
-.pagination span.current{
-  background-color: #AA8800;
-  border:1px solid #222222;
-  font-size:1.3em;
-  opacity:0.9;
-  -webkit-box-shadow: 2px 2px 2px #999;
-  -moz-box-shadow: 2px 2px 2px #999;
-  box-shadow: 2px 2px 2px #999;
-  color: #222222;
+
+#indexNav{
+  top:50px;
+}
+
+.pg{
+  text-align: center;
+}
+.pagination{
+  display:inline-block;
 }
