@@ -1,26 +1,25 @@
-<nav id="indexNav" class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
+<nav id="indexNav" class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
 
     <%= search_form_for @search, html: {class:"navbar-form navbar-left"} do |f|%>
     <div class="form-group">
         <%= f.text_field :display_or_subcategory_or_category_cont, class:"form-control", placeholder:"Search" %>
     </div>
-        <span data-toggle="buttons" id="giftbox">
-          <%= label_tag nil, class: "btn btn-default #{filterActive}" do%>
-            <%= check_box_tag "giftbox", "true", giftbox %>Giftbox?
+
+          <%= label_tag nil, class: "btn btn-default" do%>
+            <%= check_box_tag "giftbox", "true", giftbox %>&nbsp;Giftbox
           <% end %>
-        </span>
-        <%= f.submit "Submit", class:"btn btn-primary", type:"submit"%>
-        <span>
+
+        <%= f.submit "Submit", class:"btn btn-primary", type:"submit"%>&nbsp;&nbsp;
+
           <%= sort_link(@search, :price, 'Sort by Price', {}, class: 'sort btn btn-default') %>
           <%= sort_link(@search, :age, 'Sort by Age', {}, class: 'sort btn btn-default') %>
-        </span>
     <% end %>
 
   </div>
 </nav>
 
-<div class="maincontainer">
+
   <% @products.each do |product| %>
     <div class="item_wrapper">
       <%= link_to product_path(product) do%>
@@ -37,5 +36,4 @@
   <div class="pg">
     <%= paginate @products%>
   </div>
-
-</div>
+  <br />

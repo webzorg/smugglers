@@ -16,12 +16,24 @@
 
 #nav{
   z-index: 9999;
+  max-width:1080px;
+  margin:auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#indexNav{
+  top:51px;
+  max-width:1080px;
+  margin:auto;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 .maincontainer{
   width:100%;
   max-width:1080px;
   margin:0 auto;
   margin-top:110px;
+  padding-left:20px;
 }
 @media (max-width: 768px) {
   .maincontainer{
@@ -33,10 +45,10 @@
   position: relative;
   display:inline-block;
   width:207px;
-  height: 250px;
-  border:3px solid #555;
+  height: 254px;
+  border:3px solid #222222;
   border-radius: 10px;
-  padding:2px;
+  padding:0px 0px 0px 4px;
   background-color: white;
   overflow: hidden;
 }
@@ -74,9 +86,7 @@
   background-color:#ddd;
 }
 
-#indexNav{
-  top:50px;
-}
+
 
 .pg{
   text-align: center;

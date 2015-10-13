@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   end
 
   root 'welcome#index'
+  get '/contact', to: 'welcome#contact'
   resources :products, only: [:index, :show]
   #get 'products/index'
   #get 'products/show'
