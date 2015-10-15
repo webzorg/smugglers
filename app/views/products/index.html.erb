@@ -19,6 +19,7 @@
   </div>
 </nav>
 
+<div class="indexContainer">
 
   <% @products.each do |product| %>
     <div class="item_wrapper">
@@ -31,9 +32,9 @@
 
     </div>
   <% end %>
+</div> <!-- index container -->
 
-  <br />
-  <div class="pg">
-    <%= paginate @products%>
-  </div>
-  <br />
+<div class="pg">
+  <%= paginate @products%>
+</div>
+

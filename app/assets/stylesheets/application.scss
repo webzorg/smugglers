@@ -12,7 +12,13 @@
 */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "*";
 
+
+@font-face {
+    font-family: "Carnevalee-Freakshow";
+    src: font-url('Carnevalee-Freakshow.ttf') format('truetype');
+}
 
 #nav{
   z-index: 9999;
@@ -27,19 +33,139 @@
   margin:auto;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  .btn-primary{
+    background-color:#ffff77;
+    color:#222;
+  }
 }
-.maincontainer{
+.navbar-inverse .navbar-brand{
+  font-family: 'Carnevalee-Freakshow';
+  font-size:3em;
+  padding: 12px;
+  color:#eeee00;
+}
+.mainContainer{
   width:100%;
   max-width:1080px;
   margin:0 auto;
+  margin-top:51px;
+}
+.indexContainer{
   margin-top:110px;
-  padding-left:20px;
+  padding:0px 12px 0px 12px;
 }
 @media (max-width: 768px) {
-  .maincontainer{
+  .indexContainer{
     margin-top:170px;
   }
 }
+
+/* BEGIN show action style BEGIN */
+  .show_content *:hover{
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+  }
+  .show_image_block{
+    float:right;
+    width:60%;
+  }
+  .product_title{
+    margin:10px;
+    position:absolute;
+    font-size: 1.3em;
+    font-weight: bold;
+    background-color: #eee;
+  }
+  .show_image{
+    width:100%;
+    display:inline;
+  }
+  .show_content{
+    float:left;
+    padding: 10px;
+  }
+  .show_content span{
+    font-weight: bold;
+  }
+  .show_content p{
+    background-color: #eee;
+  }
+  .show_content .description{
+    max-width:270px;
+    margin:0 auto;
+  }
+  .backBut{
+    width:100%;
+  }
+  @media (max-width: 768px) {
+    .show_image_block{
+      width:100%;
+      }
+    .show_content{
+      text-align: center;
+      width: 100%;
+    }
+  }
+/* END show action style END */
+
+
+#contact_title{
+  font-size: 1.5em;
+  font-weight:bold;
+}
+.contact_text{
+  padding: 20px;
+  font-size: 1.1em;
+}
+.contact_map{
+  width:50%;
+  float:right;
+  border:1px solid #222;
+}
+.contact_map img {
+  width:100%;
+}
+
+@media (max-width: 768px) {
+  .contact_map{
+    width:100%;
+    border-bottom:5px solid #222;
+  }
+  #contact_title{
+    float:right;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.footerWrapper{
+  position:absolute;
+  bottom:0;
+  width:100%;
+}
+.footer {
+  margin:0 auto;
+  max-width:1080px;
+  border-radius: 0px 0px 10px 10px;
+  margin-top: auto;
+  font-size: 1.3em;
+  color:#777;
+  padding:5px;
+}
+.f{
+  float:right;
+}
+.footerText{
+  float:left;
+  padding-top: 8px;
+}
+
+
+
 
 .item_wrapper{
   position: relative;
@@ -49,11 +175,13 @@
   border:3px solid #222222;
   border-radius: 10px;
   padding:0px 0px 0px 4px;
-  background-color: white;
+  background-color: #fff;
   overflow: hidden;
 }
 .item_wrapper:hover{
-  border:3px solid #fff;
+  -webkit-box-shadow: 5px 5px 10px 0px rgba(255,255,0,0.8);
+  -moz-box-shadow: 5px 5px 10px 0px rgba(255,255,0,0.8);
+  box-shadow: 5px 5px 10px 0px rgba(255,255,0,0.8);
 }
 .thumb{
   margin:0 auto;
@@ -64,6 +192,7 @@
   font-weight: bold;
   position: absolute;
   margin-top: 2px;
+  color:#222;
 }
 .price{
   font-size:1.1em;
@@ -72,8 +201,8 @@
   top:5px;
   left:5px;
   padding:0px 4px 0px 4px;
-  color:black;
-  background-color:#ddd;
+  color:#222;
+  background-color:#ffff77;
 }
 .age{
   font-size:1.1em;
@@ -83,7 +212,7 @@
   left:150px;
   padding:0px 4px 0px 4px;
   color:black;
-  background-color:#ddd;
+  background-color:#ffff77;
 }
 
 
@@ -93,4 +222,13 @@
 }
 .pagination{
   display:inline-block;
+
+  .active a {
+    background-color:#ffff77;
+    color:#222;
+  }
+  .active a:hover{
+    background-color:#ffff77;
+    color:#222;
+  }
 }

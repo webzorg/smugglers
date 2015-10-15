@@ -1,10 +1,24 @@
-<h1>Smuggling alcohol since 2015</h1>
-<h2>Page Under construction</h2>
+<ul id="slides">
+  <li>
+    <%=image_tag("slide1.jpg", alt: "Let the Moon Shine!")%>
+  </li>
+  <li>
+    <%=image_tag("slide2.jpg", alt: "Al Capone Mug Shot")%>
+  </li>
+  <li>
+    <%=image_tag("slide3.jpg", alt: "Owney Madden")%>
+  </li>
+  <li>
+    <%=image_tag("slide4.jpg", alt: "Izzy Einstein & Moe Smith")%>
+  </li>
+  <li>
+    <%=image_tag("slide5.jpg", alt: "")%>
+  </li>
+  <li>
+    <%=image_tag("slide6.jpg", alt: "")%>
+  </li>
+</ul>
 
-<%= link_to "Products", products_path %>
-
-
-
-
-
-
+<script>
+  $('#slides').slippry();
+</script>
