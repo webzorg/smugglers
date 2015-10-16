@@ -4,14 +4,12 @@
     <%= search_form_for @search, html: {class:"navbar-form navbar-left"} do |f|%>
     <div class="form-group">
         <%= f.text_field :display_or_subcategory_or_category_cont, class:"form-control", placeholder:"Search" %>
+        <%= f.submit "Submit", class:"btn btn-primary", type:"submit"%>
     </div>
 
           <%= label_tag nil, class: "btn btn-default" do%>
             <%= check_box_tag "giftbox", "true", giftbox %>&nbsp;Giftbox
           <% end %>
-
-        <%= f.submit "Submit", class:"btn btn-primary", type:"submit"%>&nbsp;&nbsp;
-
           <%= sort_link(@search, :price, 'Sort by Price', {}, class: 'sort btn btn-default') %>
           <%= sort_link(@search, :age, 'Sort by Age', {}, class: 'sort btn btn-default') %>
     <% end %>

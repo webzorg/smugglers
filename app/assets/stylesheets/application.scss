@@ -14,12 +14,48 @@
 @import "bootstrap";
 @import "*";
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.footerWrapper{
+  position:absolute;
+  bottom:0;
+  width:100%;
+}
+.footer {
+  margin:0 auto;
+  max-width:1080px;
+  border-radius: 0px 0px 10px 10px;
+  margin-top: auto;
+  font-size: 1.3em;
+  color:#777;
+  padding:5px;
+}
+.f{
+  float:right;
+}
+.footerText{
+  float:left;
+  padding-top: 8px;
+}
+
+
 
 @font-face {
     font-family: "Carnevalee-Freakshow";
     src: font-url('Carnevalee-Freakshow.ttf') format('truetype');
 }
-
+#indexNav .form-group .form-control{
+  float:left;
+  max-width:220px;
+  margin-right:5px;
+}
+#indexNav .btn{
+  padding-right:4px;
+  padding-left:4px;
+}
 #nav{
   z-index: 9999;
   max-width:1080px;
@@ -34,7 +70,7 @@
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   .btn-primary{
-    background-color:#ffff77;
+    background-color:rgba(255,255,119,1);
     color:#222;
   }
 }
@@ -58,6 +94,7 @@
   .indexContainer{
     margin-top:170px;
   }
+
 }
 
 /* BEGIN show action style BEGIN */
@@ -75,7 +112,7 @@
     position:absolute;
     font-size: 1.3em;
     font-weight: bold;
-    background-color: #eee;
+    background-color: rgba(255,255,119,0.7);
   }
   .show_image{
     width:100%;
@@ -89,7 +126,7 @@
     font-weight: bold;
   }
   .show_content p{
-    background-color: #eee;
+    background-color: rgba(255,255,119,0.7);
   }
   .show_content .description{
     max-width:270px;
@@ -137,41 +174,12 @@
   }
 }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-.footerWrapper{
-  position:absolute;
-  bottom:0;
-  width:100%;
-}
-.footer {
-  margin:0 auto;
-  max-width:1080px;
-  border-radius: 0px 0px 10px 10px;
-  margin-top: auto;
-  font-size: 1.3em;
-  color:#777;
-  padding:5px;
-}
-.f{
-  float:right;
-}
-.footerText{
-  float:left;
-  padding-top: 8px;
-}
-
-
 
 
 .item_wrapper{
   position: relative;
   display:inline-block;
   width:207px;
-  height: 254px;
   border:3px solid #222222;
   border-radius: 10px;
   padding:0px 0px 0px 4px;
@@ -179,20 +187,38 @@ html {
   overflow: hidden;
 }
 .item_wrapper:hover{
-  -webkit-box-shadow: 5px 5px 10px 0px rgba(255,255,0,0.8);
-  -moz-box-shadow: 5px 5px 10px 0px rgba(255,255,0,0.8);
-  box-shadow: 5px 5px 10px 0px rgba(255,255,0,0.8);
+  -webkit-box-shadow: 5px 5px 10px 0px #555;
+  -moz-box-shadow: 5px 5px 10px 0px #555;
+  box-shadow: 5px 5px 10px 0px #555;
 }
 .thumb{
   margin:0 auto;
   display: block;
 }
+@media (max-width: 30em) {
+  .item_wrapper{
+    width:100%;
+    .thumb{
+      width:100%;
+    }
+  }
+
+}
 .display{
   font-size:1.1em;
   font-weight: bold;
   position: absolute;
-  margin-top: 2px;
+  bottom:4px;
+  width:96%;
+  height: 38px;
+  overflow: hidden;
   color:#222;
+  border-radius: 2px;
+  border:1px solid black;
+  background-color: rgba(255,255,119,0.8);
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
 }
 .price{
   font-size:1.1em;
@@ -202,7 +228,7 @@ html {
   left:5px;
   padding:0px 4px 0px 4px;
   color:#222;
-  background-color:#ffff77;
+  background-color:rgba(255,255,119,0.9);
 }
 .age{
   font-size:1.1em;
@@ -212,7 +238,7 @@ html {
   left:150px;
   padding:0px 4px 0px 4px;
   color:black;
-  background-color:#ffff77;
+  background-color:rgba(255,255,119,0.9);
 }
 
 
@@ -221,14 +247,26 @@ html {
   text-align: center;
 }
 .pagination{
-  display:inline-block;
-
-  .active a {
-    background-color:#ffff77;
+  li a{
+    border:1px solid #222;
     color:#222;
   }
+  .active a {
+    border:1px solid #222;
+    background-color:rgba(255,255,119,1);
+    color:#222;
+  }
+  li a:hover{
+    border:1px solid rgba(255,255,119,1);
+    background-color:rgba(255,255,119,1);
+    color:#222;
+    -webkit-box-shadow: 5px 5px 10px 0px #555;
+    -moz-box-shadow: 5px 5px 10px 0px #555;
+    box-shadow: 0px 6px 6px 0px #555;
+  }
   .active a:hover{
-    background-color:#ffff77;
+    border:1px solid rgba(255,255,119,1);
+    background-color:rgba(255,255,119,1);
     color:#222;
   }
 }
