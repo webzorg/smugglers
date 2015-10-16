@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: smugglers_production
-  username: webgen
+  database: <%= ENV['WEBGEN_DATABASE_NAME'] %>
+  username: <%= ENV['WEBGEN_DATABASE_USERNAME'] %>
   password: <%= ENV['WEBGEN_DATABASE_PASSWORD'] %>
