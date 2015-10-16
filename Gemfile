@@ -29,8 +29,6 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'ransack'
 
-gem 'google-analytics-rails'
-
 gem 'kaminari'
 # Use Unicorn as the app server
 # gem 'unicorn'
