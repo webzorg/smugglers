@@ -53,8 +53,8 @@ html {
   margin-right:5px;
 }
 #indexNav .btn{
-  padding-right:4px;
-  padding-left:4px;
+  padding-right:1px;
+  padding-left:1px;
 }
 #nav{
   z-index: 9999;
@@ -235,7 +235,7 @@ html {
   font-weight: bold;
   position: absolute;
   top:5px;
-  left:150px;
+  right:10px;
   padding:0px 4px 0px 4px;
   color:black;
   background-color:rgba(255,255,119,0.9);
