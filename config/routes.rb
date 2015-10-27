@@ -6,8 +6,8 @@ Rails.application.routes.draw do
         post :import
       end
     end
-    resources :users
-    resources :sessions
+    resources :users, only: [:new, :create]
+    resources :sessions, only: [:new, :create, :destroy]
     root 'home#index'
   end
 
