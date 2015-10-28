@@ -33,6 +33,7 @@ gem 'kaminari'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
+gem 'puma'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"

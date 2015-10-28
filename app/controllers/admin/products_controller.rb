@@ -24,11 +24,11 @@ class Admin::ProductsController < Admin::ApplicationController
   # POST /admin/products
   # POST /admin/products.json
   def create
-    @admin_product = Product.new(admin_product_params)
-
+    @admin_product = Product.find_or_initialize_by(sku: admin_product_params["sku"])
+      
     respond_to do |format|
-      if @admin_product.save
-        format.html { redirect_to @admin_product, notice: 'Product was successfully created.' }
+      if @admin_product.update(admin_product_params)
+        format.html { redirect_to admin_product_path(@admin_product), notice: 'Product was successfully created.(updated if same SKU)' }
         format.json { render :show, status: :created, location: @admin_product }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class Admin::ProductsController < Admin::ApplicationController
   def update
     respond_to do |format|
       if @admin_product.update(admin_product_params)
-        format.html { redirect_to @admin_product, notice: 'Product was successfully updated.' }
+        format.html { redirect_to admin_product_path(@admin_product), notice: 'Product was successfully updated.' }
         format.json { render :show, status: :ok, location: @admin_product }
       else
         format.html { render :edit }
@@ -74,6 +74,6 @@ class Admin::ProductsController < Admin::ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_product_params
-      params.require(:admin_product).permit(:sku, :price, :display, :volume, :brand, :giftbox, :subcategory, :country, :region, :category, :age, :abv, :description, :status, :image)
+      params.require(:product).permit(:sku, :price, :display, :volume, :brand, :giftbox, :subcategory, :country, :region, :category, :age, :abv, :description, :status, :image)
     end
 end

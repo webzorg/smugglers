@@ -12,13 +12,9 @@ class Product < ActiveRecord::Base
     CSV.foreach(file.path, headers: true) do |row|
 
       product_hash = row.to_hash.merge({:image => File.open("#{Rails.root}/public/tobeuploadedimages/#{row.to_hash["sku"]}.jpg")})
-      product = Product.find_by(sku: product_hash["sku"])
+      product = Product.find_or_initialize_by(sku: product_hash["sku"])
+      product.update(product_hash)
 
-      if product
-        product.update product_hash
-      else
-        Product.create! product_hash
-      end
     end
   end
   scope :status, -> (status) { where status: status }

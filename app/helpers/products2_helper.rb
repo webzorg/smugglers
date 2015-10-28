@@ -1,4 +1,4 @@
-module ProductsHelper
+module Products2Helper
   def giftbox
     params[:giftbox] && params[:giftbox].include?("true")
   end
