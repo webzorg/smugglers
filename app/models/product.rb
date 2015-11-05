@@ -11,13 +11,13 @@ class Product < ActiveRecord::Base
   def self.import(file)
     CSV.foreach(file.path, headers: true) do |row|
 
-      product_hash = row.to_hash.merge({:image => File.open("#{Rails.root}/public/tobeuploadedimages/#{row.to_hash["sku"]}.jpg")})
+      product_hash = row.to_hash.merge({:image => File.open("#{ENV['FOG_DIRECTORY']}/public/tobeuploadedimages/#{row.to_hash["sku"]}.jpg")})
       product = Product.find_or_initialize_by(sku: product_hash["sku"])
       product.update(product_hash)
 
     end
   end
-  scope :status, -> (status) { where status: status }
+  scope :status,  -> (status)  {where status: status }
   scope :giftbox, -> (giftbox) {where giftbox: giftbox}
   paginates_per 50
 

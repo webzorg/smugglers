@@ -27,6 +27,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'dotenv'
+
+gem 'asset_sync'
+gem 'fog', require: "fog/aws/storage"
+
 gem 'ransack'
 
 gem 'kaminari'
