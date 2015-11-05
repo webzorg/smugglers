@@ -32,6 +32,8 @@ gem 'dotenv'
 gem 'asset_sync'
 gem 'fog', require: "fog/aws/storage"
 
+gem 'sitemap_generator', '~> 5.1'
+
 gem 'ransack'
 
 gem 'kaminari'
@@ -41,6 +43,7 @@ gem 'kaminari'
 gem 'puma'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem "carrierwave"
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'aws-sdk', '< 2.0'
 group :development, :test do
