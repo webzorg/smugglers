@@ -43,7 +43,7 @@ gem 'kaminari'
 gem 'puma'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem "carrierwave"
+
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'aws-sdk', '< 2.0'
 group :development, :test do

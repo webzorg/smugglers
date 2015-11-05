@@ -26,15 +26,13 @@
   #   end
 #end
 SitemapGenerator::Sitemap.default_host = 'http://www.smugglers.ge'
-SitemapGenerator::Sitemap.adapter = SitemapGenerator::WaveAdapter.new
-SitemapGenerator::Sitemap.sitemaps_host = ENV['SITEMAP_HOST']
 SitemapGenerator::Sitemap.public_path = 'tmp/'
 SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
 
 
 SitemapGenerator::Sitemap.create do
   add root_path, priority: 0.7, changefreq: 'daily'
-  add products_path, priority: 0.7, changefreq: 'daily'
+  add products_path, priority: 0.9, changefreq: 'daily'
   add contact_path, changefreq: 'daily'
   Product.find_each do |product|
     add product_path(product), lastmod: product.updated_at
