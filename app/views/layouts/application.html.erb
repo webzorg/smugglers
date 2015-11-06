@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Smugglers</title>
+  <%
+  meta title: "Smugglers",
+       description: "Smugglers Liquor Store in Tbilisi",
+       keywords: %w(Smugglers liquor alcohol store tbilisi imported drunk octopus contact kekelidze street 
+        სმაგლერსი ალკოჰოლი მაღაზია თბილისი იმპორტირებული კონტაქტი კეკელიძე ქუჩა)
+  %>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= favicon_link_tag 'favicon.png' %>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= metamagic %>
 </head>
 <body>
 

@@ -33,6 +33,7 @@ gem 'asset_sync'
 gem 'fog', require: "fog/aws/storage"
 
 gem 'sitemap_generator', '~> 5.1'
+gem 'metamagic'
 
 gem 'ransack'
 
