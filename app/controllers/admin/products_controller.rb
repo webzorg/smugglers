@@ -4,7 +4,8 @@ class Admin::ProductsController < Admin::ApplicationController
   # GET /admin/products
   # GET /admin/products.json
   def index
-    @admin_products = Product.all
+    @search = Product.search(params[:q])
+    @admin_products = @search.result
   end
 
   # GET /admin/products/1
@@ -74,6 +75,6 @@ class Admin::ProductsController < Admin::ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_product_params
-      params.require(:product).permit(:sku, :price, :display, :volume, :brand, :giftbox, :subcategory, :country, :region, :category, :age, :abv, :description, :status, :image)
+      params.require(:product).permit(:sku, :price, :display, :volume, :brand, :giftbox, :subcategory, :country, :region, :category, :age, :abv, :description, :status, :image, :discount, :new_price)
     end
 end
