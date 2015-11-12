@@ -18,7 +18,26 @@
     <%=image_tag("slide6.jpg", alt: "")%>
   </li>
 </ul>
+<br/>
+
+<div class="discountContainer">
+<div id="discount_bg">
+  <h1>Discounts!</h1>
+</div>
+<br/>
+   <% @products.each do |product| %>
+    <div class="item_wrapper">
+      <%= link_to product_path(product) do%>
+        <%= image_tag product.image.url(:thumb), class: "thumb"  %>
+        <%= content_tag(:span, product.display, class:"display")%>
+        <%= content_tag(:span, "#{product.price} ლ", class:"price #{"old_price" if product.discount}")%>
+        <%= content_tag(:span, "Discount: #{product.new_price} ლ", class:"new_price") if product.discount%>
+      <%= content_tag(:span, safe_join([product.age, "yo"]) , class:"age") if product.age.to_i > 0 %>
+      <% end %>
+    </div>
+  <% end %>
+</div> <!-- discount container -->
 
 <script>
-  $('#slides').slippry();
+  $('#slides').slippry({pager:false});
 </script>

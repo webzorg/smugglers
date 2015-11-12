@@ -20,6 +20,7 @@ class Product < ActiveRecord::Base
   scope :status, -> {where(status: true)}
   scope :giftbox, -> {where(giftbox: true)}
   scope :category, -> (category) {where("category like ?", "#{category}%")}
+  scope :discount, -> {where(discount: true)}
   paginates_per 50
 
 end

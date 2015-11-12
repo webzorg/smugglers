@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-    render 'index'
+    @products = Product.discount
   end
 
   def contact

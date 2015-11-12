@@ -19,6 +19,24 @@ html {
   min-height: 100%;
 }
 
+.discountContainer {
+  .item_wrapper{
+    margin:2px;
+  }
+  #discount_bg{
+    background-color: #222222;
+    border-radius: 10px 10px 10px 10px;
+  }
+  h1{
+    width:155px; 
+    margin:0 auto;
+    padding:0px 10px 0px 10px;
+    
+    font-family: 'Carnevalee-Freakshow';
+    color: #eeee00;
+  }
+}
+
 .footerWrapper{
   position:absolute;
   bottom:0;
@@ -73,6 +91,10 @@ html {
     background-color:rgba(255,255,119,1);
     color:#222;
   }
+  .select_category{
+    max-width: 273px;
+    margin-bottom:4px;
+  }
 }
 .navbar-inverse .navbar-brand{
   font-family: 'Carnevalee-Freakshow';
@@ -92,7 +114,7 @@ html {
 }
 @media (max-width: 768px) {
   .indexContainer{
-    margin-top:170px;
+    margin-top:210px;
   }
 
 }
@@ -150,6 +172,8 @@ html {
 #contact_title{
   font-size: 1.5em;
   font-weight:bold;
+  background-color:#eeee66;
+  padding:1px;
 }
 .contact_text{
   padding: 20px;
@@ -220,7 +244,7 @@ html {
   display: table-cell;
   vertical-align: middle;
 }
-.price{
+.price, .new_price{
   font-size:1.1em;
   font-weight: bold;
   position: absolute;
@@ -230,6 +254,17 @@ html {
   color:#222;
   background-color:rgba(255,255,119,0.9);
 }
+.old_price{
+  text-decoration: line-through;
+}
+.new_price{
+  width:75px;
+  left:120px;
+  margin-right:2px;
+  color:#e22;
+  background-color:rgba(255,255,119,0.9);
+}
+
 .age{
   font-size:1.1em;
   font-weight: bold;
