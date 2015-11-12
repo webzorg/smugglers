@@ -3,7 +3,11 @@ module Products2Helper
     params[:giftbox] && params[:giftbox].include?("true")
   end
 
-  def filterActive
-    return "active" if params[:giftbox] && params[:giftbox].include?("true")
+  def category
+  	array = Product.uniq.pluck(:category)
+  	array.shift
+  	return array
   end
+
+  
 end

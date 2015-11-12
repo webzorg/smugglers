@@ -2,11 +2,14 @@
   <div class="container-fluid">
 
     <%= search_form_for @search, html: {class:"navbar-form navbar-left"} do |f|%>
-    <div class="form-group">
+      
+      
+      <div class="form-group">
         <%= f.text_field :display_or_subcategory_or_category_cont, class:"form-control", placeholder:"Search" %>
+        <%= select_tag :category, options_for_select(category, params[:category]), include_blank: "All Categories", class:"form-control"%>  
         <%= f.submit "Submit", class:"btn btn-primary", type:"submit"%>
-    </div>
-
+      </div>
+          
           <%= label_tag nil, class: "btn btn-default" do%>
             <%= check_box_tag "giftbox", "true", giftbox %>&nbsp;Giftbox
           <% end %>
