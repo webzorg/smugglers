@@ -18,6 +18,7 @@
     <%=image_tag("slide6.jpg", alt: "")%>
   </li>
 </ul>
+
 <br/>
 
 <div class="discountContainer">
@@ -39,5 +40,12 @@
 </div> <!-- discount container -->
 
 <script>
-  $('#slides').slippry({pager:false});
+
+  var ready;
+  ready = function(){ 
+    $('#slides').slippry({pager:false}); 
+  };
+  $(document).ready(ready);
+  $(document).on('page:load', ready);
+
 </script>

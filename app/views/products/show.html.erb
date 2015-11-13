@@ -5,8 +5,10 @@
 <div class="show_content">
 
   <p class="attribute_name">
-    <span>Price:</span> <%= safe_join([@product.price, " ლარი"]) %>
-  </p>
+    <span>Price:</span> <%=  %>
+    <%= content_tag(:span, safe_join([@product.price, " ლარი"]), class:"#{"old_price" if @product.discount?}")%>
+    <%= content_tag(:span, safe_join([" ", @product.new_price, " ლარი"]))  if @product.discount %>    
+  </p>  
   <p class="attribute_name">
     <span>Brand:</span> <%= @product.brand %>
   </p>
