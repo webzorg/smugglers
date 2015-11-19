@@ -21,17 +21,8 @@
 
 <div class="indexContainer">
 
-  <% @products.each do |product| %>
-    <div class="item_wrapper">
-      <%= link_to product_path(product) do%>
-        <%= image_tag product.image.url(:thumb), class: "thumb"  %>
-        <%= content_tag(:span, product.display, class:"display")%>
-        <%= content_tag(:span, "#{product.price} ლ", class:"price #{"old_price" if product.discount}")%>
-        <%= content_tag(:span, "Discount: #{product.new_price} ლ", class:"new_price") if product.discount%>
-      <%= content_tag(:span, safe_join([product.age, "yo"]) , class:"age") if product.age.to_i > 0 %>
-      <% end %>
-    </div>
-  <% end %>
+  <%= render 'shared/product_index' %>
+  
 </div> <!-- index container -->
 
 <div class="pg">
