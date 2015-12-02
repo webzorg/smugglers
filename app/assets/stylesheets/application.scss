@@ -14,6 +14,8 @@
 @import "bootstrap";
 @import "*";
 
+$mainYellow: #eeee66;
+
 html {
   position: relative;
   min-height: 100%;
@@ -172,7 +174,7 @@ html {
 #contact_title{
   font-size: 1.5em;
   font-weight:bold;
-  background-color:#eeee66;
+  background-color:$mainYellow;
   padding:1px;
 }
 .contact_text{
