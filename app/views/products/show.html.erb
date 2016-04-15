@@ -6,8 +6,8 @@
 
   <p class="attribute_name">
     <span>Price:</span> <%=  %>
-    <%= content_tag(:span, safe_join([@product.price, " ლარი"]), class:"#{"old_price" if @product.discount?}")%>
-    <%= content_tag(:span, safe_join([" ", @product.new_price, " ლარი"]))  if @product.discount %>    
+    <%= content_tag(:span, safe_join([@product.price, " ლარი"]))%>
+    <%= content_tag(:span, safe_join([" ", @product.new_price, " ლარი"]),  class:"#{"old_price" if @product.discount?}")  if @product.discount %>    
   </p>  
   <p class="attribute_name">
     <span>Brand:</span> <%= @product.brand %>
