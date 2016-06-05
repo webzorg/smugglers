@@ -170,6 +170,21 @@ html {
   }
 /* END show action style END */
 
+.panel-group a{
+  outline: 0;
+  color:black;
+  text-decoration:none;
+  &:hover{
+    background-color:white;
+  }
+  &:visited{
+    color:red;
+  }
+  h4{
+    font-size:1.3em;
+    font-weight:bold;
+  }
+}
 
 #contact_title{
   font-size: 1.5em;

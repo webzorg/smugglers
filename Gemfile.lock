@@ -53,9 +53,9 @@ GEM
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap-sass (3.3.5.1)
-      autoprefixer-rails (>= 5.0.0.1)
-      sass (>= 3.3.0)
+    bootstrap-sass (3.3.6)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.2)
     byebug (8.2.3)
     capistrano (3.4.1)
@@ -204,7 +204,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
-  bootstrap-sass (~> 3.3.5.1)
+  bootstrap-sass (~> 3.3.6)
   byebug
   capistrano
   capistrano-bundler
@@ -222,7 +222,7 @@ DEPENDENCIES
   puma
   rails (= 4.2.6)
   ransack
-  sass-rails (~> 5.0)
+  sass-rails
   sdoc (~> 0.4.0)
   sitemap_generator (~> 5.1)
   spring
@@ -231,4 +231,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.11.2
+   1.12.3
