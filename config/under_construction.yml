@@ -1,0 +1,42 @@
+theme: 'site-under-construction'
+launch_time: "24 Feb 2050 7:00pm"
+time_zone: "UTC" # Used in scheduler. For opetions, see http://api.rubyonrails.org/classes/ActiveSupport/TimeZone.html
+progress: "60" # Percent
+progress_label: "Progress"
+website_address: "http://example.com"
+host_name: "localhost:3000"
+info:
+  site_title: "My Website"
+  logo_url: "/assets/under_construction/site-under-construction/logo.png"
+  email: "support@example.com"
+  phone: "phone : 555-123456"
+  heading: "This website is under construction"
+  counter_heading: "Estimated Time Remaining Before Launch:"
+  about_title: "Some words about us"
+  about_content: |
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                  Phasellus hendrerit. Pellentesque aliquet nibh nec urna. I
+                  n nisi neque, aliquet vel, dapibus id, mattis vel, nisi.
+  inform_by_email: "Type your email id to get the updates!"
+  email_field_value: "Enter Your E-mail"
+  copyright: "Copyright &copy;"
+site_developer:
+  name: "Great Developer"
+socials_title: "You may find us below:"
+socials:
+  twitter: "#" #Full URL: http://twitter.com/great_developer
+  facebook: "#"
+  yahoo: "#"
+  # stumbleupon: "#"
+  flickr: "#"
+  #google: "#"
+  youtube: "#"
+  skype: "#"
+  deviantart: "#"
+  identica: "#"
+notify_mail:
+  sender_email_address: "do_not_reply@example.com"
+  email_subject: "My Website just launched!"
+  email_content: |
+                  Hi! Our site, "Example", has just launched!
+                  Click the flowing link to view the website: http://example.com
