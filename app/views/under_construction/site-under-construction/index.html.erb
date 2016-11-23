@@ -11,44 +11,6 @@
   <%= javascript_include_tag "under_construction" %>
   <%= stylesheet_link_tag "under_construction", :media => "all" %>
 
-  <script type="text/javascript">
-  $(function () {
-  var austDay = new Date("<%= Chronic.parse(@launch_time).to_s(:rfc822) %>");
-    $('#defaultCountdown').countdown({until: austDay, layout: '{dn} {dl}, {hn} {hl}, {mn} {ml}, and {sn} {sl}'});
-    $('#year').text(austDay.getFullYear());
-    });
-  </script><!-- jquery slider -->
-
-  <script type="text/javascript">
-  $(function() {
-    $("#slidertext").jCarouselLite({
-        btnNext: ".next",
-        btnPrev: ".prev"
-    });
-  });
-  </script><!--script for IE6-image transparency recover-->
-  <!--[if IE 6]>
-    <script type="text/javascript" src="js/DD_belatedPNG_0.0.7a-min.js"></script>
-    <script>
-      /* EXAMPLE */
-      DD_belatedPNG.fix('#logo img,#main,.counter,.twitter,.flickr,.facebook,.youtube,.skype,.stumbleupon, #submit,.prev img,.next img,#email');
-    </script>
-  <![endif]-->
-  <script type="text/javascript">
-      var show_alert = {
-        show: function() {
-          if ($('div.subcontainer').css('margin-top') == '0px') {
-              $('div.subcontainer').animate({
-                  'margin-top': '-100px',
-              });
-          } else {
-            $('div.subcontainer').animate({
-                'margin-top': '0px',
-            });
-          };
-        },
-      };
-  </script>
 </head>
 
 <body>
@@ -60,12 +22,6 @@
 	    <%= image_tag "logo.png", class: "logo"  %> 
         </a>
       </div><!--end logo-->
-
-      <div id="contact_details">
-        <p><%= link_to @info['email'], "#" %></p>
-
-   
-      </div><!--end contact details-->
     </div><!--end header-->
 
     <div style="clear:both"></div>
@@ -78,8 +34,6 @@
 
       </div><!--end content-->
 
-      <p class="copyright">
-      <%= raw @info['copyright'] + " Smugglers" %></p>
     </div><!--end main-->
   </div><!--end class container-->
 </body>
