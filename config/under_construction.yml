@@ -3,14 +3,14 @@ launch_time: "24 Feb 2050 7:00pm"
 time_zone: "UTC" # Used in scheduler. For opetions, see http://api.rubyonrails.org/classes/ActiveSupport/TimeZone.html
 progress: "60" # Percent
 progress_label: "Progress"
-website_address: "http://example.com"
+website_address: "http://smugglers.ge"
 host_name: "localhost:3000"
 info:
-  site_title: "My Website"
-  logo_url: "/assets/under_construction/site-under-construction/logo.png"
-  email: "support@example.com"
-  phone: "phone : 555-123456"
-  heading: "This website is under construction"
+  site_title: "Smugglers"
+  logo_url: "/assets/logo.png"
+  email: "info@drunkoctopus.ge"
+  phone: "phone : "
+  heading: "Under Construction"
   counter_heading: "Estimated Time Remaining Before Launch:"
   about_title: "Some words about us"
   about_content: |
